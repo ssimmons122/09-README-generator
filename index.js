@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// dependencies needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs').promises;
 const generateMarkdown = require('./utils/generateMarkdown.js');
@@ -28,9 +28,17 @@ const questions = [];
                 message: 'What does the user need to know about using the repo?',
             },
             {
+                type: 'list',
                 name: 'license',
-                message: 'What kind of license should your project have?',
-                default: 'No license specified.'
+                message: 'Choose the appropriate license for your project from the following:',
+                choices: [
+                    "Apache",
+                    "Academic",
+                    "GNU",
+                    "ISC",
+                    "MIT",
+                    "Mozilla",
+                ]
             },
             {
                 name: 'contributing',
@@ -54,7 +62,7 @@ const questions = [];
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, answers) {}
 
 // TODO: Create a function to initialize app
 function init() {}

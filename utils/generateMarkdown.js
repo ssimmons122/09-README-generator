@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
+//Slavic posted in Slack 
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
@@ -17,18 +18,38 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.username}`
-  return `# ${data.email}`
-  return `# ${data.title}`
-  return `# ${data.description}`
-  return `# ${data.license}` 
-  return `# ${data.install}`
-  return `# ${data.test}`
-  return `# ${data.usage}`
-  return `# ${data.contributing}`
+function generateMarkdown(answers) {
+    return `
 
-  ;
+  <h1 align="center"> ${answers.title} </h1>
+
+## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+## Description 
+  ${answers.description}
+
+## Installation
+  ${answers.install}
+
+## Usage
+  ${answers.usage}
+## License
+  ${answers.license} 
+## Contributing and Acknowledgements
+  ${answers.contributing} 
+## Tests
+  ${answers.test}
+## Questions
+  ${answers.username}
+  ${answers.email}
+  `;
 }
 
 module.exports = generateMarkdown;
