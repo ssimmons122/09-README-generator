@@ -11,15 +11,27 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'none') {
+    return '[License}(#license)';
+  }
+  return '';
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'none') { 
+    return `## License
+ This product is licensed under the ${license} license.`;   
+  }
+  return '';
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-    return `
+    return `# ${answers.title}
+    ${renderLicenseBadges(answers.license)}
 
   <h1 align="center"> ${answers.title} </h1>
 
@@ -27,6 +39,7 @@ function generateMarkdown(answers) {
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  ${renderLicenseLink(answers.license)}
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
@@ -40,12 +53,16 @@ function generateMarkdown(answers) {
 
 ## Usage
   ${answers.usage}
+
 ## License
-  ${answers.license} 
+  This project is licensed under the ${answers.license} license.
+
 ## Contributing and Acknowledgements
   ${answers.contributing} 
+
 ## Tests
   ${answers.test}
+
 ## Questions
   ${answers.username}
   ${answers.email}
