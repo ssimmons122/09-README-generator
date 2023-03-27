@@ -1,29 +1,34 @@
 // dependencies needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs').promises;
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const inquirer = require('inquirer'); // npm pkg
+const fs = require('fs'); //file system
+
+const generateMarkdown = require('./utils/generateMarkdown.js'); // answers
 
 // array of questions for user input
-const questions = [];
-    inquirer
-        .prompt([
+const questions = [
+    //inquirer
+        //.prompt([
             {
+                type: 'input',
                 name: 'title',
                 message: 'What is title of your project?',
-                default: 'No title specified.'
+                
             },
             {
+                type: 'input',
                 name: 'description',
                 message: 'Please enter description for your project',
-                default: 'No description.'
+                
             },
 
        // TABLE OF CONTENTS GOES HERE     
             {
+                type: 'input',
                 name: 'installation',
                 message: 'What command should be run to install the dependencies?'
             },
             {
+                type: 'input',
                 name: 'usage',
                 message: 'What does the user need to know about using the repo?',
             },
@@ -41,31 +46,50 @@ const questions = [];
                 ]
             },
             {
+                type: 'input',
                 name: 'contributing',
                 message: 'Who or what contributors need to be acknowledged for this project?'
             },
             {
+                type: 'input',
                 name: 'test',
                 message: 'What command should be run for tests?',
             },
             {   
+                type: 'input',
                 name: 'questions',
-                message: 'GitHub username?' + 'Email address?' // not sure on this 
+                message: 'GitHub username?' 
+            },
+            {   
+                type: 'input',
+                name: 'questions', 
+                message:'Email address?'
             }
-            
 
             
-        ])
-        .then(answers => {
-            console.info('Answer:', answers.username);
-        })
+        ]
+        //.then(answers => {
+        //    console.info('Answer:', answers);
+        //})
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, answers) {}
+function writeToFile(fileName, data) {
+    let content = generateMarkdown(data);
+    fs.writeFile(fileName, content, function (error) {
+        if (error) {
+            return console.log(error)
+        }
+        console.log('Success! Check out your README!')
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
-
+function init() {
+    inquirer.prompt(questions).then(function (data) {
+        let fileName = 'README.md';
+        writeToFile(fileName, data)
+   });
+};
 // Function call to initialize app
 init();

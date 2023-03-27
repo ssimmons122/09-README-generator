@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'none') {
-    return '[License}(#license)';
+    return '[License](#license)';
   }
   return '';
 }
@@ -22,50 +22,48 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'none') { 
-    return `## License
+    return `## License 
  This product is licensed under the ${license} license.`;   
   }
   return '';
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
-    return `# ${answers.title}
-    ${renderLicenseBadges(answers.license)}
+function generateMarkdown(data) {
+    return `# ${data.title} <br />
+    ${renderLicenseBadge(data.license)}
 
-  <h1 align="center"> ${answers.title} </h1>
+  <h1 align="center"> ${data.title} </h1>
 
 ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  ${renderLicenseLink(answers.license)}
-  - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
 ## Description 
-  ${answers.description}
+  ${data.description}
 
 ## Installation
-  ${answers.install}
+  ${data.install}
 
 ## Usage
-  ${answers.usage}
+  ${data.usage}
 
 ## License
-  This project is licensed under the ${answers.license} license.
+  (This project is licensed under the ${data.license} license.)
 
 ## Contributing and Acknowledgements
-  ${answers.contributing} 
+  ${data.contributing} 
 
 ## Tests
-  ${answers.test}
+  ${data.test}
 
 ## Questions
-  Connect with me on GitHub: [${answers.username}](https://github.com/${answers.username})
-  Email me at ${answers.email}
+  Connect with me on GitHub: [${data.username}](https://github.com/${data.username})
+  Email me at [${data.email}](mailto:user@example.com)
   `;
 }
 
