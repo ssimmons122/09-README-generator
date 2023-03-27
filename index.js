@@ -1,7 +1,6 @@
 // dependencies needed for this application
 const inquirer = require('inquirer'); // npm pkg
 const fs = require('fs'); //file system
-
 const generateMarkdown = require('./utils/generateMarkdown.js'); // answers
 
 // array of questions for user input
@@ -17,11 +16,12 @@ const questions = [
             {
                 type: 'input',
                 name: 'description',
-                message: 'Please enter description for your project',
+                message: 'Please enter description of your project.',
                 
             },
 
        // TABLE OF CONTENTS GOES HERE     
+
             {
                 type: 'input',
                 name: 'installation',
@@ -68,12 +68,8 @@ const questions = [
 
             
         ]
-        //.then(answers => {
-        //    console.info('Answer:', answers);
-        //})
-
-
-// TODO: Create a function to write README file
+        
+// funct to write README file
 function writeToFile(fileName, data) {
     let content = generateMarkdown(data);
     fs.writeFile(fileName, content, function (error) {
@@ -84,7 +80,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (data) {
         let fileName = 'README.md';
