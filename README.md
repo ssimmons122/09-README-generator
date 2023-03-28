@@ -18,6 +18,6 @@
   All of the testing in the command line
 
 ## Visuals
-From an test-run of the product:
+From an test-run of the product:<br>
   ![readmeforfinal](https://user-images.githubusercontent.com/121777930/228379163-d19f6439-f02a-4a19-901e-842a4780d274.png)
 
