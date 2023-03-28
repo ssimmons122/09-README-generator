@@ -1,35 +1,22 @@
-# ldsf 
+# Professional README generator 
 
-    ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-
-  ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-
-## Description 
+ ## Description 
   lkj
 
 ## Installation
-  lkj
+  Node.JS
 
 ## Usage
-  lkj
-
-## License
-  This project is licensed under the MIT license.
+  Make your own professional README.md right from VS code or your terminal
 
 ## Contributing and Acknowledgements
-  lkj 
+  Tutor Juan Torres, 
+  Helper code posted in Slack,
+  Starter code from Xander Rapstine and Grace Choi
 
 ## Tests
-  lkj
+  All of the tests in the command line
 
-## Questions
-  Connect with me on GitHub: [undefined](https://github.com/undefined) 
+## Visuals
 
-  Email me at [undefined](mailto:undefined)
   
