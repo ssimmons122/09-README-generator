@@ -62,7 +62,7 @@ const questions = [
             },
             {   
                 type: 'input',
-                name: 'questions', 
+                name: 'question2', 
                 message:'Email address?'
             }
 

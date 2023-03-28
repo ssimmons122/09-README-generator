@@ -1,7 +1,11 @@
 // license badge -- posted in slack
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    //return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
+    return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`;
+    //return `[![GitHub License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+
+
   }
   return '';
 }
@@ -40,13 +44,13 @@ function generateMarkdown(data) {
   ${data.description}
 
 ## Installation
-  ${data.install}
+  ${data.installation}
 
 ## Usage
   ${data.usage}
 
 ## License
-  (This project is licensed under the ${data.license} license.)
+  This project is licensed under the ${data.license} license.
 
 ## Contributing and Acknowledgements
   ${data.contributing} 
@@ -55,8 +59,8 @@ function generateMarkdown(data) {
   ${data.test}
 
 ## Questions
-  Connect with me on GitHub: [${data.username}](https://github.com/${data.username})
-  Email me at [${data.email}](mailto:user@example.com)
+  Connect with me on GitHub: [${data.username}](https://github.com/${data.username}) \n
+  Email me at [${data.email}](mailto:${data.email})
   `;
 }
 

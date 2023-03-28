@@ -1,16 +1,35 @@
-# README-generator
+# ldsf 
 
-## Description
-This application will dynamically generate a high-quality professional README.md file from a user's input from the command line.  README files are tyipcally the first place potential employers looks to evlauate a prospective employee's skills and professionalism.  It also allows for a quick and simple run-down of a project, which can lead to interesting collaborations with other developers.
+    ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Visual
-Screencastify and link to walkthrough video of application
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+## Description 
+  lkj
 
 ## Installation
-Will need inquirer, v8.2.4 
+  lkj
 
-## Acknowledgements
-Tutor- Juan Torres
+## Usage
+  lkj
 
 ## License
-Github repository
+  This project is licensed under the MIT license.
+
+## Contributing and Acknowledgements
+  lkj 
+
+## Tests
+  lkj
+
+## Questions
+  Connect with me on GitHub: [undefined](https://github.com/undefined) 
+
+  Email me at [undefined](mailto:undefined)
+  
