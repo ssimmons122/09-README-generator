@@ -2,9 +2,9 @@
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     //return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`;
-    //return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`;
-    //return `[![GitHub License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    //return `[![GitHub License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    //return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
 
   }
   return '';
@@ -29,8 +29,8 @@ function renderLicenseSection(license) {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-    return `# ${data.title} \n
-    ${renderLicenseBadge(data.license)}
+    return `# ${data.title} 
+${renderLicenseBadge(data.license)}
 
   ## Table of Contents
   - [Description](#description)
