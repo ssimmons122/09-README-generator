@@ -5,69 +5,63 @@ const generateMarkdown = require('./utils/generateMarkdown.js'); // answers
 
 // array of questions for user input
 const questions = [
-    //inquirer
-        //.prompt([
-            {
-                type: 'input',
-                name: 'title',
-                message: 'What is title of your project?',
-                
-            },
-            {
-                type: 'input',
-                name: 'description',
-                message: 'Please enter description of your project.',
-                
-            },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is title of your project?',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please enter description of your project.',
+    },
 
-       // TABLE OF CONTENTS GOES HERE     
+    // TABLE OF CONTENTS GOES HERE     
 
-            {
-                type: 'input',
-                name: 'installation',
-                message: 'What command should be run to install the dependencies?'
-            },
-            {
-                type: 'input',
-                name: 'usage',
-                message: 'What does the user need to know about using the repo?',
-            },
-            {
-                type: 'list',
-                name: 'license',
-                message: 'Choose the appropriate license for your project from the following:',
-                choices: [
-                    "Apache",
-                    "Academic",
-                    "GNU",
-                    "ISC",
-                    "MIT",
-                    "Mozilla",
-                ]
-            },
-            {
-                type: 'input',
-                name: 'contributing',
-                message: 'Who or what contributors need to be acknowledged for this project?'
-            },
-            {
-                type: 'input',
-                name: 'test',
-                message: 'What command should be run for tests?',
-            },
-            {   
-                type: 'input',
-                name: 'username',
-                message: 'GitHub username?' 
-            },
-            {   
-                type: 'input',
-                name: 'email', 
-                message:'Email address?'
-            }
-
-            
-        ]
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'What command should be run to install the dependencies?'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What does the user need to know about using the repo?',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose the appropriate license for your project from the following:',
+        choices: [
+            "Apache",
+            "Academic",
+            "GNU",
+            "ISC",
+            "MIT",
+            "Mozilla",
+            ]
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Who or what contributors need to be acknowledged for this project?'
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'What command should be run for tests?',
+    },
+    {   
+        type: 'input',
+        name: 'username',
+        message: 'GitHub username?' 
+    },
+    {   
+        type: 'input',
+        name: 'email', 
+        message:'Email address?'
+    }
+  ]
         
 // funct to write README file
 function writeToFile(fileName, data) {
